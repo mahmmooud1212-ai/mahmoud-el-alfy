@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mahmoud El-Alfy — Performance Marketer & Video Producer</title>
+<meta name="description" content="Interactive CV of Mahmoud El-Alfy — I plan the campaign, buy the media and create the ads myself. TikTok, Meta & Google Ads · Riyadh.">
+<meta property="og:title" content="Mahmoud El-Alfy — Interactive CV">
+<meta property="og:description" content="I plan the campaign, buy the media — and create the ads myself. 78K+ leads in 30 days.">
+<meta property="og:image" content="photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23D7192A'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' text-anchor='middle' fill='white'%3EME%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Cairo:wght@400;600;700;800&display=swap">
+<style>
+:root{
+  --ink:#121418;--ink2:#1B1E24;--ink3:#252931;--red:#D7192A;--red2:#FF3B4A;--paper:#F7F5F2;--white:#fff;
+  --text:#2B2E35;--mute:#7C818B;--line:#E6E2DC;--dline:#323741;--dtext:#D9DBE0;--dmute:#9AA0AA;
+  --head:'Poppins','Cairo',system-ui,sans-serif;--body:'Inter','Cairo',system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html[lang=ar] body{--head:'Cairo',system-ui,sans-serif;--body:'Cairo',system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.1;text-wrap:balance}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px var(--head);padding:13px 22px;border-radius:999px;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--red);color:#fff}.btn.p:hover{background:var(--red2)}
+.btn.g{border-color:currentColor;background:transparent}
+.btn .ar{transition:transform .25s var(--ease)}.btn:hover .ar{transform:translateX(4px)}
+html[dir=rtl] .btn .ar{transform:scaleX(-1)}html[dir=rtl] .btn:hover .ar{transform:scaleX(-1) translateX(4px)}
+.eyebrow{font:600 12px var(--head);letter-spacing:.32em;text-transform:uppercase;color:var(--red)}
+html[lang=ar] .eyebrow{letter-spacing:0;font-size:14px}
+
+/* ===== intro "ad break" ===== */
+#intro{position:fixed;inset:0;z-index:100;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;padding:24px;transition:opacity .6s var(--ease),visibility .6s}
+#intro.gone{opacity:0;visibility:hidden}
+#intro .adtag{position:absolute;top:calc(18px + env(safe-area-inset-top));left:20px;font:600 11px var(--head);letter-spacing:.2em;color:var(--dmute);display:flex;gap:8px;align-items:center}
+#intro .adtag i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.25}}
+#skip{position:absolute;right:20px;bottom:calc(24px + env(safe-area-inset-bottom));background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:#fff;font:600 14px var(--head);padding:10px 18px;border-radius:6px;cursor:pointer}
+#skip small{display:block;font:400 10px var(--body);color:var(--dmute);margin-top:2px}
+.ln{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.ln.on{opacity:1;transform:none}
+#intro .l1{font:800 clamp(40px,8vw,96px) var(--head);letter-spacing:-.02em}
+#intro .l1 span{color:var(--red)}
+#intro .l2{font:700 clamp(18px,3.4vw,34px) var(--head);margin-top:14px;color:var(--dtext)}
+#intro .l2 b{color:#fff}
+#intro .l3{margin-top:26px;font:800 clamp(48px,10vw,120px) var(--head);color:var(--red);line-height:1}
+#intro .l3 small{display:block;font:500 clamp(14px,2vw,20px) var(--body);color:var(--dtext);margin-top:8px}
+#intro .bar{position:absolute;left:0;bottom:0;height:3px;background:var(--red);width:0}
+#intro.run .bar{animation:prog 5.2s linear forwards}
+@keyframes prog{to{width:100%}}
+
+/* ===== top bar ===== */
+.top{position:sticky;top:0;z-index:50;background:rgba(18,20,24,.92);backdrop-filter:blur(10px);color:#fff;padding-top:env(safe-area-inset-top)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{font:800 18px var(--head);text-decoration:none}.logo span{color:var(--red)}
+.nav{display:flex;gap:22px;font:500 14px var(--head)}
+.nav a{text-decoration:none;color:var(--dtext)}.nav a:hover{color:#fff}
+.tr{display:flex;gap:10px;align-items:center}
+.lang{background:transparent;border:1px solid var(--dline);color:#fff;font:600 13px var(--head);padding:6px 12px;border-radius:999px;cursor:pointer}
+.rec-btn{background:var(--red);border:0;color:#fff;font:600 13px var(--head);padding:7px 14px;border-radius:999px;cursor:pointer}
+
+/* ===== hero ===== */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:center;padding-block:72px 84px}
+.hero h1{font-size:clamp(44px,7vw,88px);font-weight:800;letter-spacing:-.025em;margin:14px 0 12px}
+.hero h1 span{color:var(--red)}
+.hero .role{font:600 clamp(18px,2.4vw,24px) var(--head);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.hero .role i{width:7px;height:7px;border-radius:50%;background:var(--red)}
+.hero .tag{color:var(--dmute);font-style:italic;margin:12px 0 30px;font-size:17px;max-width:46ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.pic{position:relative;justify-self:center;width:min(330px,80vw);aspect-ratio:1}
+.pic img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.pic .ring{position:absolute;inset:-18px;border-radius:50%;border:1.5px dashed rgba(215,25,42,.6);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pic .live{position:absolute;bottom:8%;inset-inline-start:-4%;background:#fff;color:var(--ink);font:700 13px var(--head);padding:8px 14px;border-radius:999px;display:flex;gap:8px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.pic .live i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 1.2s infinite}
+.hero .glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(215,25,42,.35),transparent 65%);inset-inline-end:-160px;top:-180px;pointer-events:none}
+
+/* KPIs */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:-44px;position:relative;z-index:2}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;text-decoration:none;display:block;transition:transform .3s var(--ease),box-shadow .3s;position:relative;overflow:hidden}
+.kpi:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(18,20,24,.12)}
+.kpi b{display:block;font:800 clamp(30px,4vw,44px) var(--head);color:var(--red);line-height:1;font-variant-numeric:tabular-nums}
+.kpi span{display:block;color:var(--mute);font-size:14px;margin-top:8px;line-height:1.35}
+.kpi em{position:absolute;top:16px;inset-inline-end:16px;font:600 11px var(--head);font-style:normal;color:var(--mute);letter-spacing:.08em}
+.kpi.d{background:var(--ink);border-color:var(--ink)}.kpi.d span{color:var(--dmute)}
+
+/* sections */
+section{padding-block:88px 0}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.sh h2{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.02em;margin-top:10px}
+.sh p{max-width:44ch;color:var(--mute);margin:0}
+
+/* dashboard */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;font:600 13px var(--head);padding:8px 16px;border-radius:999px;cursor:pointer;color:var(--text)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dash{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:16px;transition:opacity .35s,transform .35s var(--ease)}
+.card.hide{display:none}
+.card .hd{display:flex;justify-content:space-between;align-items:start;gap:10px}
+.card h3{font-size:19px}
+.card .who{font-size:13px;color:var(--mute);margin-top:4px}
+.plats{display:flex;gap:6px;flex-wrap:wrap}
+.plat{font:700 10px var(--head);letter-spacing:.1em;padding:4px 9px;border-radius:999px;background:var(--paper);color:var(--text)}
+.plat.tt{background:#111;color:#fff;box-shadow:-2px -2px 0 #25F4EE,2px 2px 0 #FE2C55}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.m{background:var(--paper);border-radius:12px;padding:12px 14px}
+.m b{display:block;font:800 22px var(--head);color:var(--ink);font-variant-numeric:tabular-nums}
+.m span{font-size:12.5px;color:var(--mute)}
+.cpl{margin-top:2px}
+.cpl .row{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
+.cpl .track{height:8px;border-radius:8px;background:var(--paper);margin-top:6px;position:relative;overflow:hidden}
+.cpl .fill{position:absolute;inset-block:0;inset-inline-start:0;width:100%;background:linear-gradient(90deg,var(--red),#FF7A85);border-radius:8px;transition:width 1.4s var(--ease)}
+.cpl.go .fill{width:79.9%}
+.cpl small{display:block;font-size:12.5px;color:var(--red);font-weight:600;margin-top:6px}
+.card .foot{margin-top:auto;font-size:13px;color:var(--mute);border-top:1px dashed var(--line);padding-top:12px}
+
+/* cases */
+.cases{display:grid;gap:12px}
+.case{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.case summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;align-items:center;gap:18px}
+.case summary::-webkit-details-marker{display:none}
+.case .no{font:800 15px var(--head);color:var(--red);min-width:28px}
+.case summary h3{font-size:19px;flex:1}
+.case summary .k{font:700 14px var(--head);color:var(--ink);background:var(--paper);padding:6px 12px;border-radius:999px;white-space:nowrap}
+.case .pm{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;flex:none;transition:transform .3s var(--ease)}
+.case[open] .pm{transform:rotate(45deg);background:var(--ink);color:#fff;border-color:var(--ink)}
+.case .body{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:0 24px 24px}
+.case .col h4{font:700 12px var(--head);letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 8px}
+html[lang=ar] .case .col h4{letter-spacing:0;font-size:14px}
+.case .col p{margin:0;font-size:15px}
+
+/* timeline (editing timeline) */
+.edit{background:var(--ink);border-radius:22px;color:#fff;padding:22px 22px 26px;overflow:hidden}
+.edit .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.edit .tc{font:700 22px var(--head);font-variant-numeric:tabular-nums;color:var(--red2)}
+.edit .hint{font-size:13px;color:var(--dmute)}
+.tlx{overflow-x:auto;padding-bottom:6px}
+.tl{position:relative;min-width:760px;direction:ltr}
+.ruler{display:grid;grid-template-columns:110px repeat(12,1fr);font:600 11px var(--head);color:var(--dmute);margin-bottom:6px}
+.ruler span{border-inline-start:1px solid var(--dline);padding-inline-start:4px}
+.track{display:grid;grid-template-columns:110px 1fr;align-items:center;height:46px;border-top:1px solid var(--dline)}
+.track.tall{height:74px}
+.track .name{font:600 12px var(--head);color:var(--dtext);display:flex;gap:6px;align-items:center}
+.track .name i{width:8px;height:8px;border-radius:2px}
+.lane{position:relative;height:100%}
+.clip{position:absolute;top:8px;height:30px;border-radius:6px;padding:0 10px;font:600 11.5px var(--head);display:flex;align-items:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;border:0;color:#fff;transition:filter .2s,outline-color .2s;outline:2px solid transparent}
+.clip:hover{filter:brightness(1.15)}
+.clip.act{outline-color:#fff}
+.c-m{background:linear-gradient(90deg,#D7192A,#A3101D)}
+.c-p{background:linear-gradient(90deg,#3B5BDB,#2B44A8)}
+.c-e{background:linear-gradient(90deg,#4B5563,#374151)}
+.c-o{background:linear-gradient(90deg,#B7791F,#8A5A12)}
+.playhead{position:absolute;top:0;bottom:0;width:2px;background:var(--red2);pointer-events:none;z-index:3}
+.playhead::before{content:"";position:absolute;top:-2px;left:-6px;border:7px solid transparent;border-top-color:var(--red2)}
+.scrub{width:100%;margin-top:14px;accent-color:var(--red)}
+.detail{margin-top:18px;background:var(--ink2);border:1px solid var(--dline);border-radius:16px;padding:20px 22px;min-height:150px}
+.detail .when{font:700 12px var(--head);letter-spacing:.14em;color:var(--red2)}
+.detail h3{font-size:22px;margin:6px 0 2px}
+.detail .at{color:var(--dmute);font-size:14px}
+.detail ul{margin:12px 0 0;padding-inline-start:18px;color:var(--dtext)}
+.detail li{margin:4px 0}
+.detail b{color:#fff}
+.also{margin-top:14px;font-size:14px;color:var(--dmute)}
+.also button{background:none;border:1px solid var(--dline);color:var(--dtext);font:600 13px var(--head);padding:6px 12px;border-radius:999px;cursor:pointer;margin:4px 4px 0 0}
+
+/* toolkit */
+.kit{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:start;font:inherit;color:inherit;height:168px}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .6s var(--ease);transform-style:preserve-3d}
+.flip[aria-pressed=true] .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;border-radius:18px;padding:18px;backface-visibility:hidden;display:flex;flex-direction:column;justify-content:space-between}
+.flip .f{background:#fff;border:1px solid var(--line)}
+.flip .f small{font:700 11px var(--head);letter-spacing:.16em;color:var(--red);text-transform:uppercase}
+html[lang=ar] .flip .f small{letter-spacing:0;font-size:13px}
+.flip .f h3{font-size:19px}
+.flip .f .tap{font-size:12px;color:var(--mute)}
+.flip .b{background:var(--ink);color:#fff;transform:rotateY(180deg)}
+.flip .b small{font:700 11px var(--head);letter-spacing:.14em;color:var(--red2);text-transform:uppercase}
+html[lang=ar] .flip .b small{letter-spacing:0;font-size:13px}
+.flip .b p{margin:0;font-size:14px;color:var(--dtext)}
+.flip .b b{color:#fff}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tools span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:600 13px var(--head)}
+.langs{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px;color:var(--mute);font-size:15px}
+.langs b{color:var(--ink)}
+
+/* recognition + edu */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.ticket{position:relative;border-radius:22px;background:linear-gradient(135deg,#22252D,#121418);color:#fff;overflow:hidden;padding:26px 28px}
+.ticket::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:6px;background:linear-gradient(180deg,#25F4EE,#FE2C55)}
+.ticket::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.08) 50%,transparent 65%);transform:translateX(-100%);animation:sheen 4.5s ease-in-out infinite}
+@keyframes sheen{60%,100%{transform:translateX(100%)}}
+.ticket .k{font:700 12px var(--head);letter-spacing:.24em;color:#25F4EE}
+html[lang=ar] .ticket .k{letter-spacing:0;font-size:14px}
+.ticket h3{font-size:26px;margin:8px 0 10px}
+.ticket p{color:var(--dtext);margin:0}
+.ticket .ft{display:flex;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px dashed #4A4F5A;font:700 12px var(--head);letter-spacing:.2em;color:#FE2C55}
+.edu{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 28px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.edu h3{font-size:24px}
+.edu p{margin:0;color:var(--mute)}
+
+/* contact */
+.cta{margin-top:88px;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.cta .wrap{padding-block:88px;text-align:center}
+.cta h2{font-size:clamp(36px,6vw,72px);font-weight:800;letter-spacing:-.025em}
+.cta h2 span{color:var(--red)}
+.cta p{color:var(--dmute);max-width:52ch;margin:16px auto 30px}
+.cta .ctas{justify-content:center}
+.links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 28px;margin-top:34px;font-size:15px;color:var(--dtext)}
+.links a{text-decoration:none;border-bottom:1px dotted var(--red2)}
+.links a:hover{color:#fff}
+.retention{margin-top:42px;font:600 13px var(--head);color:var(--dmute);letter-spacing:.06em}
+.retention b{color:var(--red2)}
+footer{background:#0B0C0F;color:var(--dmute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-block:22px}
+
+/* recruiter modal */
+dialog{border:0;border-radius:22px;padding:0;max-width:min(560px,92vw);width:100%;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+dialog::backdrop{background:rgba(10,11,14,.7);backdrop-filter:blur(4px)}
+.qv{padding:28px}
+.qv .x{float:inline-end;background:var(--paper);border:0;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px}
+.qv h3{font-size:24px;margin:6px 0 4px}
+.qv .r{color:var(--mute);margin:0 0 16px}
+.qv ul{margin:0 0 18px;padding-inline-start:18px}
+.qv li{margin:6px 0}
+.qv .row{display:flex;gap:10px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:52px 80px}
+  .pic{order:-1;width:min(240px,64vw)}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dash{grid-template-columns:1fr}
+  .kit{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .duo{grid-template-columns:1fr}
+  .case .body{grid-template-columns:1fr}
+  .nav{display:none}
+}
+@media (max-width:480px){
+  .kit{grid-template-columns:1fr}
+  .flip{height:150px}
+  .case summary{flex-wrap:wrap}
+  .rec-btn span{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- 0. AD BREAK INTRO -->
+<div id="intro" role="dialog" aria-label="Intro">
+  <div class="adtag"><i></i><span data-i="adtag">SPONSORED · YOUR NEXT HIRE</span></div>
+  <div>
+    <div class="ln l1">Mahmoud <span>El-Alfy</span></div>
+    <div class="ln l2" data-i="introL2"><b>I plan</b> · <b>I buy</b> · <b>I create</b></div>
+    <div class="ln l3"><span id="introNum">0</span>K+<small data-i="introL3">leads in 30 days. Want to see how?</small></div>
+  </div>
+  <button id="skip"><span data-i="skip">Skip ad ›</span><small data-i="skipSmall">Don't — this ad is the CV, and I made it.</small></button>
+  <div class="bar"></div>
+</div>
+
+<!-- TOP BAR -->
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">M<span>.</span>El-Alfy</a>
+    <nav class="nav">
+      <a href="#results" data-i="navResults">Results</a>
+      <a href="#cases" data-i="navCases">Case studies</a>
+      <a href="#timeline" data-i="navTimeline">Timeline</a>
+      <a href="#toolkit" data-i="navToolkit">Toolkit</a>
+      <a href="#contact" data-i="navContact">Contact</a>
+    </nav>
+    <div class="tr">
+      <button class="lang" id="lang" aria-label="Switch language">ع</button>
+      <button class="rec-btn" id="openQv">⚡ <span data-i="qvBtn">30-sec view</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero" id="top" style="padding:0">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-i="heroEyebrow">Interactive CV · Riyadh, KSA</div>
+      <h1>Mahmoud <span>El-Alfy</span></h1>
+      <div class="role"><span data-i="role1">Performance Marketer</span><i></i><span data-i="role2">Video Producer</span></div>
+      <p class="tag" data-i="tagline">I plan the campaign, buy the media — and create the ads myself.</p>
+      <div class="ctas">
+        <a class="btn p" href="#results"><span data-i="ctaResults">Discover the Results</span><span class="ar">→</span></a>
+        <a class="btn g" href="https://www.behance.net/mahmoudramadan44" target="_blank" rel="noopener"><span data-i="ctaWork">Explore My Work</span><span class="ar">↗</span></a>
+      </div>
+    </div>
+    <div class="pic"><div class="ring"></div><img src="photo.jpg" alt="Mahmoud El-Alfy" width="330" height="330"><div class="live"><i></i><span data-i="live">Open to work</span></div></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="kpis">
+    <a class="kpi d rv" href="#c-smiley"><em>30D</em><b data-count="78" data-suf="K+">78K+</b><span data-i="k1">leads generated in the last 30 days</span></a>
+    <a class="kpi d rv" href="#c-smiley"><em>30D</em><b data-count="12" data-suf="K+">12K+</b><span data-i="k2">real patients acquired in the last 30 days</span></a>
+    <a class="kpi rv" href="#c-social"><em>2Y</em><b data-count="2" data-suf="M+">2M+</b><span data-i="k3">real Saudi followers grown in 2 years</span></a>
+    <a class="kpi rv" href="#results"><em>2Y</em><b data-count="55" data-suf="M+">55M+</b><span data-i="k4">ad views in Saudi Arabia in 2 years</span></a>
+  </div>
+</div>
+
+<main>
+<!-- 2. RESULTS DASHBOARD -->
+<section id="results"><div class="wrap">
+  <div class="sh rv">
+    <div><div class="eyebrow" data-i="resEyebrow">01 · Campaign dashboard</div><h2 data-i="resTitle">Discover my campaign results</h2></div>
+    <div class="filters" role="group" aria-label="Filter by platform">
+      <button class="chip" aria-pressed="true" data-f="all" data-i="fAll">All</button>
+      <button class="chip" aria-pressed="false" data-f="tiktok">TikTok</button>
+      <button class="chip" aria-pressed="false" data-f="meta">Meta</button>
+      <button class="chip" aria-pressed="false" data-f="google">Google</button>
+    </div>
+  </div>
+  <div class="dash">
+    <article class="card rv" id="c-unique" data-p="tiktok">
+      <div class="hd"><div><h3>Unique Colour Car Care</h3><div class="who" data-i="uWho">Media Buyer & Digital Marketer · 2026 – now</div></div><div class="plats"><span class="plat tt">TIKTOK</span></div></div>
+      <div class="metrics">
+        <div class="m"><b data-count="597">597</b><span data-i="uM1">leads in 41 days</span></div>
+        <div class="m"><b>10.66</b><span data-i="uM2">SAR avg. cost per lead</span></div>
+        <div class="m"><b data-count="6365" data-sep="1">6,365</b><span data-i="uM3">SAR managed spend</span></div>
+        <div class="m"><b>8.52</b><span data-i="uM4">SAR CPL — top campaign</span></div>
+      </div>
+      <div class="cpl" id="cpl"><div class="row"><span data-i="cplA">Avg CPL 10.66</span><span data-i="cplB">Best 8.52</span></div><div class="track"><div class="fill"></div></div><small data-i="cplNote">−20% CPL through weekly creative testing</small></div>
+      <div class="foot" data-i="uFoot">Spark Ads + auto-DM flows that capture phone numbers instantly.</div>
+    </article>
+    <article class="card rv" id="c-smiley" data-p="meta tiktok google">
+      <div class="hd"><div><h3>Smiley Medical Complex</h3><div class="who" data-i="sWho">Media Buyer & Medical Marketer · 2025 – now</div></div><div class="plats"><span class="plat">META</span><span class="plat tt">TIKTOK</span><span class="plat">GOOGLE</span></div></div>
+      <div class="metrics">
+        <div class="m"><b data-count="78" data-suf="K+">78K+</b><span data-i="sM1">patient leads · last 30 days</span></div>
+        <div class="m"><b data-count="12" data-suf="K+">12K+</b><span data-i="sM2">real patients · same 30 days</span></div>
+      </div>
+      <div class="foot" data-i="sFoot">Clear booking funnels, fast follow-up and trustworthy healthcare content.</div>
+    </article>
+    <article class="card rv" id="c-social" data-p="meta tiktok">
+      <div class="hd"><div><h3 data-i="soTitle">Social media · 4 brands</h3><div class="who">Sahab · AlMutairi Modern Cars · Kababka · AlKing</div></div><div class="plats"><span class="plat" data-i="ksa">KSA</span></div></div>
+      <div class="metrics">
+        <div class="m"><b data-count="2" data-suf="M+">2M+</b><span data-i="soM1">real Saudi followers · 2 years</span></div>
+        <div class="m"><b data-count="55" data-suf="M+">55M+</b><span data-i="soM2">ad views in KSA · 2 years</span></div>
+      </div>
+      <div class="foot" data-i="soFoot">Content calendars plus every video, photo and design — produced in-house.</div>
+    </article>
+  </div>
+</div></section>
+
+<!-- 3. CASE STUDIES -->
+<section id="cases"><div class="wrap">
+  <div class="sh rv"><div><div class="eyebrow" data-i="caEyebrow">02 · Case studies</div><h2 data-i="caTitle">How the results happened</h2></div><p data-i="caSub">Tap a case to open the challenge, what I did, and the outcome.</p></div>
+  <div class="cases">
+    <details class="case rv" open>
+      <summary><span class="no">01</span><h3 data-i="ca1">Unique Colour — leads on TikTok</h3><span class="k">8.52 SAR CPL</span><span class="pm">+</span></summary>
+      <div class="body">
+        <div class="col"><h4 data-i="hCh">The challenge</h4><p data-i="ca1c">Turn TikTok attention into real phone numbers for a car-care business — at a cost that makes sense.</p></div>
+        <div class="col"><h4 data-i="hDo">What I did</h4><p data-i="ca1d">Built lead funnels with Spark Ads and auto-DM flows; shot, edited and animated every creative; tested weekly; partnered directly with TikTok's business team.</p></div>
+        <div class="col"><h4 data-i="hRe">Result</h4><p data-i="ca1r"><b>597 leads in 41 days</b> at a 10.66 SAR average CPL on 6,365 SAR spend — down to 8.52 SAR on the top campaign.</p></div>
+      </div>
+    </details>
+    <details class="case rv">
+      <summary><span class="no">02</span><h3 data-i="ca2">Smiley — from lead to patient</h3><span class="k">12K+ patients</span><span class="pm">+</span></summary>
+      <div class="body">
+        <div class="col"><h4 data-i="hCh">The challenge</h4><p data-i="ca2c">Fill a medical complex's schedule with real patients, not just form fills.</p></div>
+        <div class="col"><h4 data-i="hDo">What I did</h4><p data-i="ca2d">Ran Meta, TikTok and Google Ads, built clear booking funnels with fast follow-up, and produced trustworthy content for the services and specialists.</p></div>
+        <div class="col"><h4 data-i="hRe">Result</h4><p data-i="ca2r"><b>78K+ patient leads</b> and <b>12K+ real patients</b> in the last 30 days.</p></div>
+      </div>
+    </details>
+    <details class="case rv">
+      <summary><span class="no">03</span><h3 data-i="ca3">Four brands, one in-house studio</h3><span class="k">2M+ followers</span><span class="pm">+</span></summary>
+      <div class="body">
+        <div class="col"><h4 data-i="hCh">The challenge</h4><p data-i="ca3c">Grow engaged Saudi audiences for automotive and F&amp;B brands.</p></div>
+        <div class="col"><h4 data-i="hDo">What I did</h4><p data-i="ca3d">Planned content calendars and produced each brand's videos, photos and designs myself.</p></div>
+        <div class="col"><h4 data-i="hRe">Result</h4><p data-i="ca3r">Part of <b>2M+ real Saudi followers</b> and <b>55M+ ad views</b> in two years.</p></div>
+      </div>
+    </details>
+  </div>
+</div></section>
+
+<!-- 4. TIMELINE -->
+<section id="timeline"><div class="wrap">
+  <div class="sh rv"><div><div class="eyebrow" data-i="tlEyebrow">03 · Career timeline</div><h2 data-i="tlTitle">Scrub my timeline</h2></div><p data-i="tlSub">Built like an editing timeline: drag the playhead or tap a clip.</p></div>
+  <div class="edit rv">
+    <div class="bar"><span class="tc" id="tcYear">2026</span><span class="hint" data-i="tlHint">◀ drag ▶ · tracks run in parallel</span></div>
+    <div class="tlx"><div class="tl" id="tl">
+      <div class="ruler" id="ruler"><span></span></div>
+      <div class="track tall"><div class="name"><i style="background:#D7192A"></i><span data-i="trM">Marketing</span></div><div class="lane" data-lane="m"></div></div>
+      <div class="track tall"><div class="name"><i style="background:#3B5BDB"></i><span data-i="trP">Production</span></div><div class="lane" data-lane="p"></div></div>
+      <div class="track"><div class="name"><i style="background:#6B7280"></i><span data-i="trE">Engineering</span></div><div class="lane" data-lane="e"></div></div>
+      <div class="track"><div class="name"><i style="background:#B7791F"></i><span data-i="trO">Operations</span></div><div class="lane" data-lane="o"></div></div>
+      <div class="playhead" id="ph"></div>
+    </div></div>
+    <input class="scrub" id="scrub" type="range" min="2015" max="2026.99" step="0.01" value="2026.5" aria-label="Timeline year">
+    <div class="detail" id="detail" aria-live="polite"></div>
+    <div class="also"><span data-i="alsoL">Also in KSA (dates not listed):</span> <button id="alsoBtn" data-i="alsoB">Social Media Marketer · 4 brands</button></div>
+  </div>
+</div></section>
+
+<!-- 5. TOOLKIT -->
+<section id="toolkit"><div class="wrap">
+  <div class="sh rv"><div><div class="eyebrow" data-i="kitEyebrow">04 · Toolkit</div><h2 data-i="kitTitle">Explore my skills</h2></div><p data-i="kitSub">Every card flips to show where I actually used it.</p></div>
+  <div class="kit" id="kit"></div>
+  <div class="tools rv"><span>Premiere Pro</span><span>After Effects</span><span>Photoshop</span><span>Illustrator</span><span>DaVinci Resolve</span><span>CapCut</span><span data-i="aiTools">AI creative tools</span></div>
+  <div class="langs rv"><span><b data-i="ar">Arabic</b> — <span data-i="native">Native</span></span><span><b data-i="en">English</b> — <span data-i="adv">Advanced</span></span><span data-i="interests">🎵 Music · 🎬 Film · ✈️ Travel</span></div>
+</div></section>
+
+<!-- 6. RECOGNITION + EDUCATION -->
+<section id="recognition"><div class="wrap">
+  <div class="sh rv"><div><div class="eyebrow" data-i="recEyebrow">05 · Recognition & education</div><h2 data-i="recTitle">Earned, not given</h2></div></div>
+  <div class="duo">
+    <div class="ticket rv"><div class="k" data-i="tkK">DIRECT LINE WITH</div><h3>TikTok · ByteDance</h3><p data-i="tkP">Ongoing direct calls &amp; online meetings with TikTok's business team — earned through strong results.</p><div class="ft"><span>VIP ACCESS</span><span>NOV 2026</span></div></div>
+    <div class="edu rv"><div class="eyebrow" data-i="eduK">Education</div><h3>B.Sc. Mechatronics Engineering</h3><p>Arab Academy for Science, Technology &amp; Maritime Transport (AAST)</p><p data-i="eduNote">The engineer's test-and-optimize mindset behind every campaign.</p></div>
+  </div>
+</div></section>
+</main>
+
+<!-- 7. CONTACT -->
+<section class="cta" id="contact"><div class="wrap">
+  <div class="eyebrow" data-i="ctEyebrow">Let's work together</div>
+  <h2 data-i="ctTitle">Let's make ads <span>that sell.</span></h2>
+  <p data-i="ctSub">Strategy, media buying and the creative itself — from one person who owns the result.</p>
+  <div class="ctas">
+    <a class="btn p" href="mailto:mahmmooud1212@gmail.com"><span data-i="ctMail">Start a conversation</span><span class="ar">→</span></a>
+    <a class="btn g" href="Mahmoud-El-Alfy-CV.pdf" download><span data-i="ctPdf">Download PDF CV</span><span class="ar">↓</span></a>
+  </div>
+  <div class="links">
+    <a href="tel:+966530682921">+966 53 068 2921</a>
+    <a href="mailto:mahmmooud1212@gmail.com">mahmmooud1212@gmail.com</a>
+    <a href="https://www.linkedin.com/in/mahmoud-el-alfy-964091318" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.behance.net/mahmoudramadan44" target="_blank" rel="noopener">Behance</a>
+  </div>
+  <div class="retention" data-i="retention">You watched my ad to the end. <b>That's retention.</b></div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Mahmoud El-Alfy</span><span data-i="foot">Riyadh, Saudi Arabia · Egyptian · Resident in KSA</span></div></footer>
+
+<!-- RECRUITER QUICK VIEW -->
+<dialog id="qv"><div class="qv">
+  <button class="x" id="closeQv" aria-label="Close">×</button>
+  <div class="eyebrow" data-i="qvK">30-second view</div>
+  <h3>Mahmoud El-Alfy</h3>
+  <p class="r" data-i="qvR">Performance Marketer & Video Producer · Riyadh, KSA</p>
+  <ul>
+    <li data-i="qv1">Media buying on <b>TikTok, Meta &amp; Google Ads</b> — strategy to creative.</li>
+    <li data-i="qv2"><b>78K+ leads</b> and <b>12K+ real patients</b> in the last 30 days (Smiley Medical Complex).</li>
+    <li data-i="qv3"><b>597 leads in 41 days</b> at 10.66 SAR avg CPL, best 8.52 (Unique Colour, TikTok).</li>
+    <li data-i="qv4"><b>2M+</b> Saudi followers and <b>55M+</b> ad views in two years.</li>
+    <li data-i="qv5">Shoots, edits and animates his own ads · B.Sc. Mechatronics Engineering (AAST).</li>
+  </ul>
+  <div class="row"><a class="btn p" href="Mahmoud-El-Alfy-CV.pdf" download><span data-i="ctPdf">Download PDF CV</span><span class="ar">↓</span></a><a class="btn g" href="mailto:mahmmooud1212@gmail.com" data-i="qvMail">Email</a></div>
+</div></dialog>
+
+<script>
+(function(){
+const AR={
+adtag:"إعلان ممول · موظفك القادم",introL2:"<b>أخطّط</b> · <b>أشتري</b> · <b>أصنع</b>",introL3:"عميل محتمل في 30 يومًا. تبي تعرف كيف؟",skip:"تخطَّ الإعلان ›",skipSmall:"لا تفعل — هذا الإعلان هو السيرة، وأنا من صنعه.",
+navResults:"النتائج",navCases:"دراسات الحالة",navTimeline:"المسيرة",navToolkit:"المهارات",navContact:"تواصل",qvBtn:"ملخص 30 ثانية",
+heroEyebrow:"سيرة ذاتية تفاعلية · الرياض",role1:"مسوّق أداء",role2:"صانع فيديو",tagline:"أخطّط الحملة، أشتري الإعلان، وأصنعه بنفسي.",ctaResults:"شوف النتائج بنفسك",ctaWork:"استكشف أعمالي",live:"متاح للعمل",
+k1:"عميل محتمل خلال آخر 30 يومًا",k2:"مريض حقيقي خلال آخر 30 يومًا",k3:"متابع سعودي حقيقي خلال سنتين",k4:"مشاهدة إعلانية في السعودية خلال سنتين",
+resEyebrow:"01 · لوحة الحملات",resTitle:"اكتشف نتائج حملاتي",fAll:"الكل",
+uWho:"مشتري إعلانات ومسوّق رقمي · 2026 – الآن",uM1:"عميل محتمل في 41 يومًا",uM2:"ريال متوسط تكلفة العميل",uM3:"ريال ميزانية مُدارة",uM4:"ريال تكلفة العميل — أفضل حملة",cplA:"المتوسط 10.66",cplB:"الأفضل 8.52",cplNote:"‎−20% في تكلفة العميل بالاختبار الأسبوعي للإعلانات",uFoot:"‏Spark Ads ورسائل تلقائية تلتقط أرقام الجوال فورًا.",
+sWho:"مشتري إعلانات ومسوّق طبي · 2025 – الآن",sM1:"عميل محتمل · آخر 30 يومًا",sM2:"مريض حقيقي · نفس الـ30 يومًا",sFoot:"مسارات حجز واضحة، متابعة سريعة، ومحتوى صحي موثوق.",
+soTitle:"سوشيال ميديا · 4 براندات",ksa:"السعودية",soM1:"متابع سعودي حقيقي · سنتان",soM2:"مشاهدة إعلانية · سنتان",soFoot:"خطط محتوى وكل الفيديوهات والصور والتصاميم — إنتاج داخلي.",
+caEyebrow:"02 · دراسات الحالة",caTitle:"كيف تحققت النتائج",caSub:"اضغط على أي حالة لتشوف التحدي، وش سويت، والنتيجة.",hCh:"التحدي",hDo:"وش سويت",hRe:"النتيجة",
+ca1:"يونيك كلر — عملاء من تيك توك",ca1c:"تحويل انتباه تيك توك إلى أرقام جوال حقيقية لمركز عناية بالسيارات وبتكلفة منطقية.",ca1d:"بنيت مسارات عملاء بـ Spark Ads ورسائل تلقائية، وصوّرت ومنتجت وحرّكت كل إعلان، واختبرت أسبوعيًا، وتعاونت مباشرة مع فريق أعمال تيك توك.",ca1r:"<b>597 عميلًا في 41 يومًا</b> بمتوسط 10.66 ريال للعميل على ميزانية 6,365 ريال — ونزلت إلى 8.52 ريال في أفضل حملة.",
+ca2:"سمايلي — من عميل محتمل إلى مريض",ca2c:"ملء جدول مجمع طبي بمرضى حقيقيين، لا مجرد نماذج.",ca2d:"أدرت إعلانات Meta وTikTok وGoogle، وبنيت مسارات حجز واضحة بمتابعة سريعة، وأنتجت محتوى موثوقًا للخدمات والأطباء.",ca2r:"<b>+78 ألف عميل محتمل</b> و<b>+12 ألف مريض حقيقي</b> خلال آخر 30 يومًا.",
+ca3:"أربعة براندات واستوديو داخلي واحد",ca3c:"تنمية جمهور سعودي متفاعل لبراندات سيارات ومطاعم.",ca3d:"خططت المحتوى وأنتجت بنفسي فيديوهات وصور وتصاميم كل براند.",ca3r:"جزء من <b>+2 مليون متابع سعودي</b> و<b>+55 مليون مشاهدة</b> خلال سنتين.",
+tlEyebrow:"03 · المسيرة المهنية",tlTitle:"تصفّح مسيرتي",tlSub:"مصممة مثل تايم لاين المونتاج: اسحب المؤشر أو اضغط على أي كليب.",tlHint:"◀ اسحب ▶ · المسارات تعمل بالتوازي",trM:"تسويق",trP:"إنتاج",trE:"هندسة",trO:"تشغيل",alsoL:"أيضًا في السعودية (بدون تواريخ):",alsoB:"مسوّق سوشيال ميديا · 4 براندات",
+kitEyebrow:"04 · صندوق الأدوات",kitTitle:"استكشف مهاراتي",kitSub:"كل بطاقة تنقلب لتريك وين استخدمت المهارة فعلًا.",aiTools:"أدوات إبداع بالذكاء الاصطناعي",ar:"العربية",native:"اللغة الأم",en:"الإنجليزية",adv:"متقدم",interests:"🎵 موسيقى · 🎬 أفلام · ✈️ سفر",
+recEyebrow:"05 · التقدير والتعليم",recTitle:"تقدير مكتسب، لا ممنوح",tkK:"خط مباشر مع",tkP:"مكالمات واجتماعات مستمرة مع فريق أعمال تيك توك — بفضل النتائج القوية.",eduK:"التعليم",eduNote:"عقلية المهندس — اختبر وحسّن — وراء كل حملة.",
+ctEyebrow:"خلّنا نشتغل سوا",ctTitle:"خلّنا نصنع إعلانات <span>تبيع.</span>",ctSub:"استراتيجية، شراء إعلانات، والإعلان نفسه — من شخص واحد يتحمّل النتيجة.",ctMail:"ابدأ المحادثة",ctPdf:"حمّل السيرة PDF",retention:"تابعت إعلاني لآخره. <b>هذا اسمه Retention.</b>",foot:"الرياض، السعودية · مصري · مقيم في المملكة",
+qvK:"ملخص 30 ثانية",qvR:"مسوّق أداء وصانع فيديو · الرياض",qv1:"شراء إعلانات على <b>TikTok وMeta وGoogle</b> — من الاستراتيجية حتى الإعلان.",qv2:"<b>+78 ألف عميل محتمل</b> و<b>+12 ألف مريض حقيقي</b> خلال آخر 30 يومًا (مجمع سمايلي الطبي).",qv3:"<b>597 عميلًا في 41 يومًا</b> بمتوسط 10.66 ريال للعميل، وأفضلها 8.52 (يونيك كلر، تيك توك).",qv4:"<b>+2 مليون</b> متابع سعودي و<b>+55 مليون</b> مشاهدة إعلانية خلال سنتين.",qv5:"يصوّر ويمنتج ويحرّك إعلاناته بنفسه · بكالوريوس هندسة ميكاترونكس (الأكاديمية العربية).",qvMail:"إيميل"
+};
+const EN={};document.querySelectorAll('[data-i]').forEach(e=>{EN[e.dataset.i]=e.innerHTML});
+
+/* jobs (from the CV — no invented data) */
+const JOBS=[
+ {id:'unique',lane:'m',row:0,sh:'Unique',s:2026,e:2027,t:{en:'Media Buyer & Digital Marketer',ar:'مشتري إعلانات ومسوّق رقمي'},at:'Unique Colour Car Care · Riyadh',when:{en:'2026 → NOW · concurrent',ar:'2026 → الآن · بالتوازي'},b:{en:['Deliver <b>597 leads in 41 days</b> on TikTok Ads at a <b>10.66 SAR</b> average CPL, managing <b>6,365 SAR</b>.','Lead funnels with Spark Ads and auto-DM flows that capture phone numbers instantly.','Shoot, edit and animate every creative; weekly tests cut CPL to <b>8.52 SAR</b> on the top campaign.','Partner directly with TikTok\'s business team.'],ar:['<b>597 عميلًا في 41 يومًا</b> على تيك توك بمتوسط <b>10.66 ريال</b> للعميل وميزانية <b>6,365 ريال</b>.','مسارات عملاء بـ Spark Ads ورسائل تلقائية تلتقط الأرقام فورًا.','أصوّر وأمنتج وأحرّك كل إعلان؛ والاختبار الأسبوعي نزّل التكلفة إلى <b>8.52 ريال</b>.','تعاون مباشر مع فريق أعمال تيك توك.']}},
+ {id:'smiley',lane:'m',row:1,sh:'Smiley Medical',s:2025,e:2027,t:{en:'Media Buyer & Medical Marketer',ar:'مشتري إعلانات ومسوّق طبي'},at:'Smiley Medical Complex · Saudi Arabia',when:{en:'2025 → NOW · concurrent',ar:'2025 → الآن · بالتوازي'},b:{en:['Generate <b>78K+ patient leads in the last 30 days</b> on Meta, TikTok and Google Ads.','Turn leads into <b>12K+ real patients</b> in the same 30 days.','Produce trustworthy healthcare content.'],ar:['<b>+78 ألف عميل محتمل خلال آخر 30 يومًا</b> على Meta وTikTok وGoogle.','تحويلهم إلى <b>+12 ألف مريض حقيقي</b> في نفس الـ30 يومًا.','إنتاج محتوى صحي موثوق.']}},
+ {id:'eng',lane:'e',sh:'AAST · Engineer',s:2020,e:2024,t:{en:'Technical Engineer — Mechatronics & Robotics',ar:'مهندس فني — ميكاترونكس وروبوتات'},at:'AAST',when:{en:'2020 → 2023',ar:'2020 → 2023'},b:{en:['Designed and tested robotic systems — the root of my data-first optimization approach.'],ar:['صممت واختبرت أنظمة روبوتية — أصل منهجي في التحسين المعتمد على البيانات.']}},
+ {id:'sup',lane:'o',sh:'Supervisor',s:2021,e:2023,t:{en:'Part-time Supervisor',ar:'مشرف بدوام جزئي'},at:'Abu Qir Shipyard · Alexandria  |  Kader Factory for Military Industries · Cairo',when:{en:'2021 → 2022',ar:'2021 → 2022'},b:{en:[],ar:[]}},
+ {id:'free',lane:'p',row:0,sh:'Freelance photo & design',s:2017,e:2023,t:{en:'Freelance Event Photographer & Graphic Designer',ar:'مصور فعاليات ومصمم جرافيك مستقل'},at:'Freelance',when:{en:'2017 → 2022',ar:'2017 → 2022'},b:{en:['Shot weddings, conferences and corporate events, and delivered branding projects.'],ar:['صوّرت أعراسًا ومؤتمرات وفعاليات شركات، ونفّذت مشاريع هوية بصرية.']}},
+ {id:'cc',lane:'p',row:1,sh:'Content creator',s:2015,e:2018,t:{en:'Content Creator & Photographer',ar:'صانع محتوى ومصور'},at:'',when:{en:'2015 → 2017',ar:'2015 → 2017'},b:{en:['Created photo and video content from concept to final edit (Adobe CC).'],ar:['أنتجت محتوى صور وفيديو من الفكرة حتى المونتاج النهائي (Adobe CC).']}}
+];
+const SOCIAL={t:{en:'Social Media Marketer',ar:'مسوّق سوشيال ميديا'},at:'Sahab Car Maintenance · AlMutairi Modern Cars · Kababka · AlKing',when:{en:'SAUDI ARABIA',ar:'السعودية'},b:{en:['Grew engaged audiences for 4 automotive & F&B brands — part of <b>2M+ real Saudi followers</b> in two years.','Planned content calendars and produced each brand\'s videos, photos and designs.'],ar:['نمّيت جمهورًا متفاعلًا لـ4 براندات سيارات ومطاعم — جزء من <b>+2 مليون متابع سعودي</b> خلال سنتين.','خططت المحتوى وأنتجت فيديوهات وصور وتصاميم كل براند.']}};
+const SKILLS=[
+ {k:{en:'Ad platforms',ar:'منصات إعلانية'},n:'TikTok Ads',w:{en:'<b>Unique Colour</b> — 597 leads in 41 days · <b>Smiley</b> — patient leads.',ar:'<b>يونيك كلر</b> — 597 عميلًا في 41 يومًا · <b>سمايلي</b> — عملاء مرضى.'}},
+ {k:{en:'Ad platforms',ar:'منصات إعلانية'},n:'Meta Ads',w:{en:'<b>Smiley Medical Complex</b> — part of 78K+ leads in 30 days.',ar:'<b>مجمع سمايلي الطبي</b> — ضمن +78 ألف عميل خلال 30 يومًا.'}},
+ {k:{en:'Ad platforms',ar:'منصات إعلانية'},n:'Google Ads',w:{en:'<b>Smiley Medical Complex</b> — search & lead campaigns.',ar:'<b>مجمع سمايلي الطبي</b> — ضمن حملات جلب العملاء.'}},
+ {k:{en:'Marketing',ar:'تسويق'},n:{en:'Lead generation',ar:'جلب العملاء'},w:{en:'<b>Unique Colour</b> — Spark Ads + auto-DM flows that capture numbers.',ar:'<b>يونيك كلر</b> — Spark Ads ورسائل تلقائية تلتقط الأرقام.'}},
+ {k:{en:'Marketing',ar:'تسويق'},n:{en:'Creative testing (A/B)',ar:'اختبار الإعلانات (A/B)'},w:{en:'<b>Unique Colour</b> — weekly tests cut CPL to 8.52 SAR.',ar:'<b>يونيك كلر</b> — اختبار أسبوعي نزّل التكلفة إلى 8.52 ريال.'}},
+ {k:{en:'Marketing',ar:'تسويق'},n:{en:'Healthcare marketing',ar:'التسويق الطبي'},w:{en:'<b>Smiley</b> — 12K+ real patients in 30 days.',ar:'<b>سمايلي</b> — +12 ألف مريض حقيقي خلال 30 يومًا.'}},
+ {k:{en:'Production',ar:'إنتاج'},n:{en:'Shooting, editing & motion',ar:'تصوير ومونتاج وموشن'},w:{en:'<b>Unique Colour</b> — I shoot, edit and animate every creative.',ar:'<b>يونيك كلر</b> — أصوّر وأمنتج وأحرّك كل إعلان.'}},
+ {k:{en:'Production',ar:'إنتاج'},n:{en:'Photography & design',ar:'تصوير وتصميم'},w:{en:'<b>Freelance 2017–2022</b> — events and branding · <b>4 brands</b> in KSA.',ar:'<b>عمل حر 2017–2022</b> — فعاليات وهويات · <b>4 براندات</b> في السعودية.'}}
+];
+let L='en';
+const tx=v=>typeof v==='string'?v:v[L];
+
+/* language */
+function setLang(l){L=l;const html=document.documentElement;html.lang=l;html.dir=l==='ar'?'rtl':'ltr';
+ document.querySelectorAll('[data-i]').forEach(e=>{const k=e.dataset.i;const v=l==='ar'?AR[k]:EN[k];if(v!==undefined)e.innerHTML=v});
+ document.getElementById('lang').textContent=l==='ar'?'EN':'ع';renderKit();showAt(+scrub.value,true);try{localStorage.setItem('lang',l)}catch(e){}}
+document.getElementById('lang').onclick=()=>setLang(L==='en'?'ar':'en');
+
+/* intro */
+const intro=document.getElementById('intro');let introDone=false;
+function endIntro(){if(introDone)return;introDone=true;intro.classList.add('gone');document.body.style.overflow='';startCounters()}
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let seen=false;try{seen=sessionStorage.getItem('introSeen')==='1'}catch(e){}
+if(reduce||seen||location.hash){intro.classList.add('gone');introDone=true}else{
+ document.body.style.overflow='hidden';intro.classList.add('run');
+ const ls=intro.querySelectorAll('.ln');[0,1400,3000].forEach((t,i)=>setTimeout(()=>ls[i].classList.add('on'),t+150));
+ setTimeout(()=>count(document.getElementById('introNum'),78,'',1500),3150);
+ setTimeout(endIntro,5600);try{sessionStorage.setItem('introSeen','1')}catch(e){}
+}
+document.getElementById('skip').onclick=endIntro;
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!introDone)endIntro()});
+
+/* counters */
+function count(el,n,suf,dur){const sep=el.dataset&&el.dataset.sep;const t0=performance.now();
+ (function f(t){const p=Math.min((t-t0)/dur,1),v=Math.round(n*(1-Math.pow(1-p,3)));el.textContent=(sep?v.toLocaleString('en-US'):v)+(suf||'');if(p<1)requestAnimationFrame(f)})(t0)}
+let countersStarted=false;
+function startCounters(){if(countersStarted||reduce)return;countersStarted=true;
+ const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const el=en.target;count(el,+el.dataset.count,el.dataset.suf||'',1300);io.unobserve(el)}}),{threshold:.6});
+ document.querySelectorAll('[data-count]').forEach(el=>io.observe(el))}
+if(introDone)startCounters();
+
+/* reveal */
+const rio=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');rio.unobserve(en.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>rio.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),4000);
+const cpl=document.getElementById('cpl');new IntersectionObserver((es,o)=>es.forEach(en=>{if(en.isIntersecting){cpl.classList.add('go');o.disconnect()}}),{threshold:.6}).observe(cpl);
+
+/* filters */
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===c));const f=c.dataset.f;
+ document.querySelectorAll('.card').forEach(card=>card.classList.toggle('hide',f!=='all'&&!card.dataset.p.split(' ').includes(f)))});
+
+/* timeline */
+const Y0=2015,Y1=2027,span=Y1-Y0;const ruler=document.getElementById('ruler');
+for(let y=Y0;y<Y1;y++){const s=document.createElement('span');s.textContent=y;ruler.appendChild(s)}
+const LABEL=110;const tl=document.getElementById('tl');
+JOBS.forEach(j=>{const lane=document.querySelector(`[data-lane="${j.lane}"]`);const b=document.createElement('button');
+ b.className='clip c-'+j.lane;if(j.row!==undefined){b.style.top=(6+j.row*34)+'px';b.style.height='28px'}b.style.left=((j.s-Y0)/span*100)+'%';b.style.width=((j.e-j.s)/span*100)+'%';b.dataset.id=j.id;b.textContent=j.sh;b.title=tx(j.t);
+ b.onclick=()=>{scrub.value=Math.min(j.s+.5,2026.99);showJob(j);movePH()};lane.appendChild(b)});
+const scrub=document.getElementById('scrub'),ph=document.getElementById('ph'),detail=document.getElementById('detail'),tc=document.getElementById('tcYear');
+function movePH(){const w=tl.clientWidth-LABEL;ph.style.left=(LABEL+(scrub.value-Y0)/span*w)+'px';tc.textContent=Math.floor(scrub.value)}
+function render(j){detail.innerHTML=`<div class="when">${tx(j.when)}</div><h3>${tx(j.t)}</h3><div class="at">${j.at}</div>${(j.b[L]||[]).length?'<ul>'+j.b[L].map(x=>'<li>'+x+'</li>').join('')+'</ul>':''}`}
+function showJob(j){document.querySelectorAll('.clip').forEach(c=>c.classList.toggle('act',c.dataset.id===j.id));render(j)}
+let lastJob=null;
+function showAt(y,force){const hits=JOBS.filter(j=>y>=j.s&&y<j.e);const pri={m:0,o:1,e:2,p:3};hits.sort((a,b)=>pri[a.lane]-pri[b.lane]||b.s-a.s);
+ const j=hits[0];if(j&&(force||j!==lastJob)){lastJob=j;showJob(j)}else if(!j){detail.innerHTML=`<div class="when">${Math.floor(y)}</div><h3 style="color:var(--dmute)">—</h3>`;lastJob=null;document.querySelectorAll('.clip').forEach(c=>c.classList.remove('act'))}movePH()}
+scrub.oninput=()=>showAt(+scrub.value);addEventListener('resize',movePH);
+document.getElementById('alsoBtn').onclick=()=>{document.querySelectorAll('.clip').forEach(c=>c.classList.remove('act'));render(SOCIAL)};
+
+/* toolkit */
+const kit=document.getElementById('kit');
+function renderKit(){kit.innerHTML='';SKILLS.forEach((s,i)=>{const b=document.createElement('button');b.className='flip rv in';b.setAttribute('aria-pressed','false');
+ b.innerHTML=`<div class="in"><div class="f"><small>${tx(s.k)}</small><h3>${tx(s.n)}</h3><span class="tap">${L==='ar'?'اضغط لتشوف الدليل ↻':'Tap to see where ↻'}</span></div><div class="b"><small>${L==='ar'?'استخدمتها في':'Used at'}</small><p>${tx(s.w)}</p></div></div>`;
+ b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');kit.appendChild(b)})}
+
+/* quick view */
+const qv=document.getElementById('qv');document.getElementById('openQv').onclick=()=>{endIntro();qv.showModal()};document.getElementById('closeQv').onclick=()=>qv.close();
+qv.addEventListener('click',e=>{if(e.target===qv)qv.close()});
+
+renderKit();
+let saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
+if(saved==='ar'||(!saved&&navigator.language&&navigator.language.startsWith('ar')))setLang('ar');else showAt(+scrub.value,true);
+})();
+</script>
+</body>
+</html>
